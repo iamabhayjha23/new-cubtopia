@@ -1,0 +1,86 @@
+<!-- Circular Skill Wheel Curriculum Example -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skill-Based Curriculum Wheel</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f8fc; }
+    .wheel-container {
+      width: 600px;
+      height: 600px;
+      margin: 40px auto;
+      position: relative;
+    }
+    .wheel-center {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .wheel-segment {
+      position: absolute;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-size: 1.1em;
+      font-weight: bold;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .wheel-segment:hover { transform: scale(1.07); }
+    /* Segment Colors and Positions */
+    .cognitive   { background: #f37021; left: 60px; top: 0px; }
+    .linguistic  { background: #0074d9; right: 60px; top: 0px;}
+    .soc-emotion { background: #ffce00; left: 0px; bottom: 60px;}
+    .physical    { background: #16a085; right: 0px; bottom: 60px;}
+    .century21   { background: #53636b; left: 180px; top: 410px; }
+    /* Icons Styling */
+    .segment-icon { font-size: 2.5em; margin-bottom: 10px;}
+    /* Responsive */
+    @media (max-width: 700px) {
+      .wheel-container { width: 95vw; height: 95vw;}
+      .wheel-segment { width: 35vw; height: 35vw;}
+      .wheel-center { width: 28vw; height: 28vw;}
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">Not Just ABCs – Real-life Skills Curriculum</h2>
+  <div class="wheel-container">
+    <div class="wheel-segment cognitive">
+      <span class="segment-icon">&#128200;</span>
+      <div>Cognitive Skills<br><small>Numeracy, Logic, Geometry</small></div>
+    </div>
+    <div class="wheel-segment linguistic">
+      <span class="segment-icon">&#128218;</span>
+      <div>Linguistic Skills<br><small>Reading, Writing, Listening</small></div>
+    </div>
+    <div class="wheel-segment soc-emotion">
+      <span class="segment-icon">&#128522;</span>
+      <div>Socio-Emotional Skills<br><small>Empathy, Self Awareness</small></div>
+    </div>
+    <div class="wheel-segment physical">
+      <span class="segment-icon">&#127947;</span>
+      <div>Physical Skills<br><small>Music, Movement, Motor Skills</small></div>
+    </div>
+    <div class="wheel-segment century21">
+      <span class="segment-icon">&#9881;&#65039;</span>
+      <div>21st Century Skills<br><small>Making, Exploration, Creativity</small></div>
+    </div>
+    <div class="wheel-center">
+      <strong>Skill-Based Syllabus</strong>
+      <br>
+      <span style="font-size:1.1em;">Discover & Thrive</span>
+    </div>
+  </div>
+</body>
+</html>
