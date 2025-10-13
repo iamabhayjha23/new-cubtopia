@@ -28,7 +28,7 @@ img{
 }
 
 .logo {
-	max-width: 50%;
+	max-width: 35%;
 }
 a:hover{
 	text-decoration: none;
@@ -164,7 +164,7 @@ header .navbar:after{
 	left: 0;
 	right: 0;
 	height: 20px;
-	bottom: -16px;
+	bottom: -19px;
 	background: url(../images/wave-bg3.png) repeat-x;
 	z-index: 100;
 }
@@ -176,7 +176,7 @@ header .navbar-collapse.collapse{
 }
 
 .navbar .navbar-nav .nav-item{
-	padding: 30px 6px;
+	padding: 10px 10px;
 }
 
 .navbar .navbar-nav .nav-link{
