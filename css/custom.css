@@ -1541,11 +1541,11 @@ footer.footer{
   margin-bottom: 0;
 }
 .curriculum-content li strong {
-  color: #1976d2;
+  color: #6a4f18;
 }
 .curriculum-content em {
   font-style: italic;
-  color: #a4cf27;
+  color: #8d0d0d;
 }
 
 @media (max-width: 991px) {
