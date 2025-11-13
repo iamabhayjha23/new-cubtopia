@@ -108,6 +108,9 @@
 	var swiperAnimation = new SwiperAnimation();
 	var mySwiper = new Swiper('.swiper-container.banner-slider', {
 		effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
 		speed: 2000,
 		autoplay: {
 			delay: 6000

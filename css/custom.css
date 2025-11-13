@@ -5,7 +5,7 @@
 */
 
 /************************************/
-/***** 	    General css		     ****/
+/***** General css		     ****/
 /************************************/
 
 body{
@@ -143,7 +143,7 @@ a:focus{
 }
 
 /************************************/
-/*****    Navigation area css   *****/
+/***** Navigation area css   *****/
 /************************************/
 
 header.header{
@@ -183,7 +183,7 @@ header .navbar-collapse.collapse{
 	padding: 4px 10px;
 	font-size: 16px;
 	font-weight: bold;
-	color: #ff5722;
+	color: #000000;
 	flex-wrap: nowrap;
 	white-space: nowrap;
 	text-transform: uppercase;
@@ -251,7 +251,7 @@ header .navbar-collapse.collapse{
 }
 
 /**************************************/
-/*****    Banner Slider area css  *****/
+/***** Banner Slider area css  *****/
 /**************************************/
 
 .top-bar{
@@ -347,11 +347,11 @@ header .navbar-collapse.collapse{
 }
 
 .banner-slide .banner-slide-overlay{
-	text-align: center;
+	text-align: right;
 	position: absolute;
-	top: 50%;
-	left: 30%;
-	right: 30%;
+	top: 28%;
+	left: 20%;
+	right: 8%;
 	transform: translate(0, -50%);
 }
 
@@ -444,7 +444,7 @@ header .navbar-collapse.collapse{
 }
 
 /**************************************/
-/*****   Our Activities area css  *****/
+/***** Our Activities area css  *****/
 /**************************************/
 
 .our-activities{
@@ -555,7 +555,7 @@ header .navbar-collapse.collapse{
 }
 
 /************************************/
-/*****     Courses area css     *****/
+/***** Courses area css     *****/
 /************************************/
 
 .courses{
@@ -688,7 +688,7 @@ header .navbar-collapse.collapse{
 }
 
 /************************************/
-/*****    About us area css     *****/
+/***** About us area css     *****/
 /************************************/
 
 .about-us{
@@ -746,7 +746,7 @@ header .navbar-collapse.collapse{
 }
 
 /************************************/
-/*****   Faculty Team area css  *****/
+/***** Faculty Team area css  *****/
 /************************************/
 
 .faculty{
@@ -837,7 +837,7 @@ header .navbar-collapse.collapse{
 }
 
 /**********************************/
-/*****     Event area css     *****/
+/***** Event area css     *****/
 /**********************************/
 
 .events{
@@ -986,7 +986,7 @@ header .navbar-collapse.collapse{
 }
 
 /*************************************/
-/*****    Testimonial area css   *****/
+/***** Testimonial area css   *****/
 /*************************************/
 
 .testimonial{
@@ -1070,7 +1070,7 @@ header .navbar-collapse.collapse{
 }
 
 /*************************************/
-/*****   Photo Gallery area css  *****/
+/***** Photo Gallery area css  *****/
 /*************************************/
 
 .photo-gallery{
@@ -1138,16 +1138,24 @@ header .navbar-collapse.collapse{
 }
 
 /*************************************/
-/*****     Contact us area css   *****/
+/***** Contact us area css   *****/
 /*************************************/
+/*
+/*
+========================================
+    Contact Us Section - V3 (2x2 Grid + Form)
+========================================
+*/
 
-.contactus{
-	background: #ecf5fe;
-	padding: 100px 0;
-	position: relative;
+.contact-section-v2 {
+    background: #ffeee9; /* Light pink background from your theme */
+    padding: 100px 0;
+    position: relative;
+    z-index: 1; /* Ensure it sits above any potential background elements */
 }
 
-.contactus:after{
+/* Adds the wave effect at the bottom */
+.contact-section-v2:after{
 	content: '';
 	display: block;
 	position: absolute;
@@ -1155,130 +1163,239 @@ header .navbar-collapse.collapse{
 	right: 0;
 	bottom: 0px;
 	height: 16px;
-	background: url(../images/wave-bg3.png) repeat-x;
+	background: url(../images/wave-bg3.png) repeat-x; /* Assuming you have this wave background image */
 	transform: rotate(180deg);
 }
 
-.contact-form .form-control{
-	border: none;
-	color: inherit;
-	padding: 10px 20px;
-	height: auto;
-	resize: none;
-	background: #fff;
-	border-radius: 8px;
-	border: 4px solid rgba(25,118,209,0.14);
-	outline: 0;
-	appearance: none;
-	-webkit-appearance: none;
-	box-shadow: none;
+/* Section Title */
+.contact-section-v2 .section-title {
+    margin-bottom: 60px; /* Space between main title and content */
 }
 
-.btn-contact{
-	background: #1976d2;
-	border: none;
-	color: #fff;
-	padding: 10px 40px;
-	border: 4px solid rgba(255,255,255,0.5);
-	border-radius: 8px;
-	cursor: pointer;
-	transition: all 0.3s;
-	box-shadow: none;
-	outline: 0;
+.contact-section-v2 .section-title h2 {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 42px;
+    color: #ff5722; /* Orange from your theme */
+    margin-bottom: 10px;
 }
 
-.btn-contact:hover,
-.btn-contact:focus{
-	background: #ff5722;
-	box-shadow: none;
-	outline: 0;
+.contact-section-v2 .section-title p {
+    font-size: 18px;
+    color: #707070;
+    margin: 0;
 }
 
-.contact-info p{
-	font-size: 20px;
-	font-weight: 400;
-	color: #707070;
-	position: relative;
-	padding: 5px 0 5px 60px;
-	margin-bottom: 40px;
+
+/* Left side: 2x2 Grid for Contact Info */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between grid items */
+    padding-right: 20px; /* Space from the form on larger screens */
 }
 
-.contact-info .email:before{
-	content: '\f003';
-	display: block;
-	font-family: FontAwesome;
-	width: 40px;
-	height: 40px;
-	background: #ff5722;
-	box-shadow: 0 0 0 6px rgba(255,87,34,0.5);
-	text-align: center;
-	line-height: 40px;
-	font-size: 18px;
-	color: #fff;
-	border-radius: 50%;
-	position: absolute;
-	top: 0;
-	left: 0;
+.contact-grid-item {
+    background-color: #fff;
+    border-radius: 15px; /* Rounded corners */
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: all 0.3s ease;
+    height: 100%; /* Ensure all items are same height in a row */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.contact-info .contact:before{
-	content: '\f095';
-	display: block;
-	font-family: FontAwesome;
-	width: 40px;
-	height: 40px;
-	background: #1976d2;
-	box-shadow: 0 0 0 6px rgba(25,118,209,0.5);
-	text-align: center;
-	line-height: 40px;
-	font-size: 18px;
-	color: #fff;
-	border-radius: 50%;
-	position: absolute;
-	top: 0;
-	left: 0;
+.contact-grid-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Slightly more prominent shadow on hover */
 }
 
-.contact-info .address:before{
-	content: '\f041';
-	display: block;
-	font-family: FontAwesome;
-	width: 40px;
-	height: 40px;
-	background: #a4cf27;
-	box-shadow: 0 0 0 6px rgba(164,207,39,0.5);
-	text-align: center;
-	line-height: 40px;
-	font-size: 18px;
-	color: #fff;
-	border-radius: 50%;
-	position: absolute;
-	top: 0;
-	left: 0;
+.contact-grid-item .icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #d8576d; /* Reddish color from your image */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto; /* Center the icon and add bottom margin */
+    color: #fff;
+    font-size: 30px;
 }
 
-.contact-social-link a{
-	display: inline-block;
-	width: 40px;
-	height: 40px;
-	background: #1976d2;
-	color: #fff;
-	font-size: 18px;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	box-shadow: 0 0 0 6px rgba(25,118,209,0.5);
-	margin: 6px 30px 6px 0;
-	transition: all 0.3s;
+.contact-grid-item h4 {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.contact-social-link a:hover{
-	background: #ff5722;
-	box-shadow: 0 0 0 6px rgba(255,87,34,0.5);
+.contact-grid-item p {
+    font-size: 15px;
+    color: #707070;
+    line-height: 1.6;
+    margin: 0; /* Remove default paragraph margin */
+}
+
+
+/* Right side: Get In Touch Form */
+.get-in-touch-wrapper {
+    background-color: #fcf6ec; /* Light yellow background from your image */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    height: 100%; /* Make it fill the height alongside the grid */
+    display: flex;
+    flex-direction: column;
+}
+
+.get-in-touch-wrapper .contact-section-title {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 36px; /* Slightly larger title for the form */
+    color: #333;
+    margin-bottom: 30px;
+    text-align: left; /* Align title to left */
+    padding-bottom: 10px;
+}
+
+.get-in-touch-wrapper .contact-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 40px; /* Indent the underline a bit */
+    width: 60px;
+    height: 3px;
+    background-color: #ffc107; /* Yellow from the form button in your image */
+}
+
+.get-in-touch-form .form-group {
+    margin-bottom: 15px;
+}
+
+.get-in-touch-form .form-control {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #555;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.get-in-touch-form .form-control:focus {
+    border-color: #ffc107; /* Yellow border on focus */
+    box-shadow: 0 0 5px rgba(255,193,7,0.3);
+}
+
+.get-in-touch-form textarea.form-control {
+    height: 120px; /* Taller for message */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Submit Button */
+.btn-submit-now {
+    background-color: #ffc107; /* Yellow from your image */
+    color: #fff;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 20px;
+    padding: 12px 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%; /* Full width button */
+    margin-top: 10px;
+}
+
+.btn-submit-now:hover {
+    background-color: #ffae00; /* Slightly darker yellow on hover */
+    color: #fff;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 991px) { /* For tablets and smaller desktops */
+    .contact-info-grid {
+        grid-template-columns: repeat(1, 1fr); /* Single column for info boxes */
+        padding-right: 0;
+        margin-bottom: 40px; /* Space before the form */
+    }
+
+    .get-in-touch-wrapper {
+        padding: 30px;
+    }
+    .get-in-touch-wrapper .contact-section-title::after {
+        left: 30px; /* Adjust underline position for smaller padding */
+    }
+}
+
+@media (max-width: 575px) { /* For mobile phones */
+    .contact-grid-item {
+        padding: 25px;
+    }
+    .contact-grid-item .icon-circle {
+        width: 60px;
+        height: 60px;
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    .contact-grid-item h4 {
+        font-size: 22px;
+    }
+    .contact-grid-item p {
+        font-size: 14px;
+    }
+    .get-in-touch-wrapper {
+        padding: 25px;
+    }
+    .get-in-touch-wrapper .contact-section-title {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .get-in-touch-form .form-control {
+        height: 45px;
+        font-size: 14px;
+    }
+    .get-in-touch-form textarea.form-control {
+        height: 100px;
+    }
+    .btn-submit-now {
+        font-size: 18px;
+        padding: 10px 25px;
+    }
+}
+
+/* Submit Button */
+.btn-submit-now {
+    background-color: #1976d2; /* Theme blue */
+    color: #fff;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-submit-now:hover {
+    background-color: #ff5722; /* Theme orange on hover */
+    color: #fff;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 991px) {
+    .get-in-touch-wrapper {
+        padding-left: 0;
+        margin-top: 40px; /* Add space between columns on mobile */
+    }
 }
 
 /*************************************/
-/*****      Footer area css      *****/
+/***** Footer area css      *****/
 /*************************************/
 
 footer.footer{
@@ -1312,7 +1429,7 @@ footer.footer{
 }
 
 /************************************/
-/*****       Media Screens      *****/
+/***** Media Screens      *****/
 /************************************/
 
 @media only screen and (max-width: 991px){
@@ -1712,3 +1829,408 @@ footer.footer{
 .enquire-form button[type="submit"]:hover {
   background: #1976d2;
 }
+
+
+
+/*
+========================================
+    Contact Us Section
+========================================
+*/
+
+/* This class is used to add standard padding */
+.section-padding {
+    padding: 80px 0;
+}
+
+.contact-us-section {
+    /* This is a teal/blue color similar to your image */
+    background-color: #0097a7; 
+    color: #ffffff;
+    position: relative;
+}
+
+/* This adds the wave effect at the bottom */
+.contact-us-section:after{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0px;
+	height: 16px;
+	background: url(../images/wave-bg3.png) repeat-x;
+	transform: rotate(180deg);
+}
+
+/* Style for the main "Contact Us" title */
+.contact-us-section .section-title h2 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px; /* Adds space below the title */
+}
+
+/* A wrapper for each of the 3 items */
+.contact-item {
+    margin-bottom: 30px; /* For spacing on mobile */
+}
+
+/* Styles the icon */
+.contact-icon i {
+    font-size: 48px; /* Makes the icon large */
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Styles the sub-headings (Our Location, Call Us, Email Us) */
+.contact-item h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+/* Styles the text (address, phone, email) */
+.contact-item p {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0;
+}
+
+/*
+========================================
+    Highlight Text Style
+========================================
+*/
+.highlight-text {
+    font-weight: 700; /* Makes it bold */
+    color: #ff5722;   /* Uses the site's main orange color */
+    font-size: 2em; /* Makes it slightly larger */
+}
+
+
+/*
+========================================
+    Curriculum Hexagon Layout
+========================================
+*/
+.hexagon-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 700px; /* Adjust max-width as needed */
+    min-height: 550px; /* Provides space for the layout */
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hexagon-center-graphic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 160px;
+    background: #fdfdfd;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Bubblegum Sans', cursive;
+    color: #ff5722;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    border: 6px solid #ffeee9;
+    z-index: 10;
+}
+
+.hexagon-item {
+    position: absolute;
+    width: 160px;
+    height: 184px; /* height = width * 1.15 */
+    background-color: #fef4f1;
+    /* This creates the hexagon shape */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Make hexagon item itself clickable */
+.hexagon-wrapper a .hexagon-item {
+	cursor: pointer;
+}
+
+.hexagon-wrapper a .hexagon-item:hover {
+    transform: scale(1.1);
+    background-color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    z-index: 20; /* Bring to front on hover */
+}
+
+.hexagon-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+}
+
+.hexagon-content .hex-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hexagon-content h3 {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+    color: #333;
+}
+
+/* Icon Colors (using your theme's colors) */
+.hex-icon.color-orange { color: #ff5722; }
+.hex-icon.color-blue { color: #1976d2; }
+.hex-icon.color-green { color: #a4cf27; }
+.hex-icon.color-yellow { color: #ffc32f; }
+
+
+/* Positioning for the 7 hexagons */
+/* Calculations are relative to the center (50%, 50%) */
+.pos-1 { /* Top-Left */
+    top: calc(50% - 140px - 46px); /* (50% - center_offset - half_height) */
+    left: calc(50% - 120px - 40px); /* (50% - center_offset - half_width) */
+}
+.pos-2 { /* Top-Right */
+    top: calc(50% - 140px - 46px);
+    left: calc(50% + 120px - 40px);
+}
+.pos-3 { /* Mid-Right */
+    top: calc(50% - 46px);
+    left: calc(50% + 160px - 80px);
+}
+.pos-4 { /* Bottom-Right */
+    top: calc(50% + 140px - 46px);
+    left: calc(50% + 120px - 40px);
+}
+.pos-5 { /* Bottom-Left */
+    top: calc(50% + 140px - 46px);
+    left: calc(50% - 120px - 40px);
+}
+.pos-6 { /* Mid-Left */
+    top: calc(50% - 46px);
+    left: calc(50% - 160px - 80px);
+}
+.pos-7 { /* Center-Top (replaces old pos-1) */
+    top: calc(50% - 180px - 46px);
+    left: calc(50% - 80px); /* 50% - half_width */
+}
+
+/* Make layout responsive for smaller screens */
+@media (max-width: 767px) {
+    .hexagon-wrapper {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 100px; /* Make space for center title */
+    }
+
+    .hexagon-center-graphic {
+        top: -20px; /* Position title at the top */
+        transform: translate(-50%, 0);
+    }
+    
+    .hexagon-item {
+        position: static; /* Remove absolute positioning */
+        width: 100%;
+        height: 180px; /* Adjust height as needed */
+        margin: 0;
+    }
+
+	/* Reset position for <a> tag triggers */
+	.hexagon-wrapper a {
+		position: static !important;
+		top: auto !important;
+		left: auto !important;
+	}
+
+    /* Manually place the 7th item in the center */
+    .pos-7,
+	.hexagon-wrapper a.pos-7 {
+        grid-column: 1 / span 2;
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .pos-7,
+	.hexagon-wrapper a.pos-7 {
+        width: 70%; /* Make center item a bit bigger */
+    }
+}
+
+
+/*
+========================================
+    Program Alternating Row Layout
+========================================
+*/
+
+.program-row-alternating {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 60px; /* Space between each program */
+}
+
+/* This is the magic: every "even" (2nd, 4th) row is reversed */
+.program-row-alternating:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.program-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.program-modal-image {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.program-content {
+    flex: 1;
+}
+
+/* Styles for the content, to match your site */
+.program-content h3 {
+    font-size: 28px;
+    font-family: 'Bubblegum Sans', cursive;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+.program-content h4 {
+    font-size: 22px;
+    font-family: 'Bubblegum Sans', cursive;
+    color: #1976d2; /* Using your theme's blue */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.program-content p {
+    color: #707070;
+	line-height: 1.7em;
+	margin-bottom: 1.5em;
+}
+
+.program-content ul {
+    margin-left: 24px;
+    margin-bottom: 15px;
+    color: #707070;
+}
+
+.program-content li {
+    margin-bottom: 5px;
+}
+
+.program-content li strong {
+  color: #6a4f18;
+}
+
+/* Responsive stacking for mobile */
+@media (max-width: 767px) {
+    .program-row-alternating,
+    .program-row-alternating:nth-child(even) {
+        flex-direction: column; /* Stack all items */
+        gap: 20px;
+    }
+    
+    .program-image {
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+
+/*
+========================================
+    Curriculum Modal & Hexagon Link
+========================================
+*/
+
+/* This removes the blue link color and underline */
+.hex-modal-trigger,
+.hex-modal-trigger:hover,
+.hex-modal-trigger:focus {
+    text-decoration: none;
+    color: inherit;
+    /* This makes the <a> tag inherit the hex's position */
+    position: absolute;
+}
+
+/* Style the image inside the modal */
+.program-modal-image {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+/* Style the modal title to match the site's Bubblegum font */
+.modal-title {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 28px;
+    color: #ff5722;
+}
+
+/* Style the content in the modal to match the old section */
+.modal-body p {
+	color: #707070;
+	line-height: 1.7em;
+	margin-bottom: 1.7em;
+}
+
+.modal-body h3, .modal-body h4 {
+    font-size: 20px;
+    font-family: 'Bubblegum Sans', cursive;
+    color: #ff5722;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.modal-body ul {
+    margin-left: 24px;
+    margin-bottom: 15px;
+    color: #707070;
+}
+
+.modal-body li {
+    margin-bottom: 5px;
+}
+
+.modal-body li strong {
+  color: #6a4f18;
+}
+
+.modal-body li em {
+  font-style: italic;
+  color: #8d0d0d;
+}
+
+/* Fix for modal z-index issue with sticky header */
+.modal {
+	z-index: 1050 !important;
+}
+.modal-backdrop {
+	z-index: 1040 !important;
+}
+
