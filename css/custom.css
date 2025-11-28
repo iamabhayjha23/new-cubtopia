@@ -28,7 +28,7 @@ img{
 }
 
 .logo {
-	max-width: 50%;
+	max-width: 80%;
 }
 a:hover{
 	text-decoration: none;
@@ -193,7 +193,7 @@ header .navbar-collapse.collapse{
 }
 
 .navbar .navbar-nav .nav-link.active{
-	background: #1976d2;
+	background: #fd7d38;
 	color: #fff;
 }
 

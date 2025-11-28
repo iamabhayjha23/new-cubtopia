@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+    /* Changes color of main navbar links on hover */
+    #main-menu .nav-link:hover,
+    #main-menu .nav-item.dropdown .dropdown-toggle:hover {
+        color: #f7941d !important; /* Vibrant Orange for hover text */
+    }
+
+    /* Changes background color of dropdown items on hover */
+    .dropdown-menu .dropdown-item:hover {
+        background-color: #ffe0b2; /* Light Orange background for dropdown hover */
+        color: #f7941d;
+    }
+    </style>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,8 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				<div class="col-md-4">
 					<div class="header-social-link">
 						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-linkedin"></i></a>
+						
 						<a href="#"><i class="fa fa-instagram"></i></a>
 					</div>
 				</div>
@@ -71,12 +83,24 @@ document.addEventListener('DOMContentLoaded', function() {
 	<header class="header">
 		<nav class="navbar navbar-expand-lg navbar-light" id="main-navbar">
 			<div class="container">
-				<a class="navbar-brand" href="#"><img  class="logo" src="images/logo.jpg" alt="" /></a>
+				<a class="navbar-brand" href="index.html"><img  class="logo" src="images/logo.jpg" alt="" /></a>
 				<ul class="navbar-nav ml-auto" id="main-menu">
   <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
   <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
   <li class="nav-item"><a class="nav-link" href="#courses">Why Cubtopia</a></li>
-  <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+  
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPrograms" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Programs
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownPrograms">
+      <a class="dropdown-item" href="playgroup.html">Preschool Program</a>
+      <a class="dropdown-item" href="nursery.html">Daycare Program</a>
+      <a class="dropdown-item" href="k1.html">Integrated Program</a>
+      <a class="dropdown-item" href="k2.html">Summer Camp</a>
+      <a class="dropdown-item" href="">Extra Curriculum Activities</a>
+    </div>
+  </li>
   <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
   <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
 </ul>
@@ -171,12 +195,12 @@ document.addEventListener('DOMContentLoaded', function() {
             At our preschool, we are inspired by the simple yet powerful dream of creating the kind of school we would want for our own children — a place where every child feels safe, valued, and inspired to grow. We believe that the values and morals nurtured at this early stage become the foundation for life, shaping children into kind, confident, and responsible individuals. Our aim is not only to prepare them for the next steps in their academic journey, but also to guide them in becoming compassionate human beings who will carry these lessons throughout their lives.
           </p>
           
-          <h3>Vision Statement</h3>
+          <h3>Our Vision</h3>
           <p>
             "To nurture curious, confident, and compassionate lifelong learners by providing a joyful and safe environment where every child's individuality is celebrated."
           </p>
           
-          <h3>Mission Statement</h3>
+          <h3>Our Mission</h3>
           <p>Our mission is to:</p>
           <ul>
             <li>Create a warm, stimulating, and inclusive learning space that fosters creativity, exploration, and a love for learning.</li>
@@ -457,107 +481,8 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 </div>
 <section class="courses" id="programs">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="section-title">
-          <h2 class="color-orange">Our Programs</h2>
-          <p>Fostering Growth and Curiosity at Every Stage</p>
-        </div>
-      </div>
-    </div>
+    </section>
 
-    <div class="program-row-alternating wow fadeInLeft" data-wow-delay="0.3s">
-      <div class="program-image">
-        <img src="images/program-1.png" alt="Playgroup Program" class="program-modal-image">
-      </div>
-      <div class="program-content">
-        <h3>🌱 Playgroup Program (1.5 to 3 years)</h3>
-        <p>This stage marks toddlers’ first steps toward independence. They explore the world through senses, begin feeding themselves, show curiosity, and attempt to communicate. It’s a period of rapid physical and emotional discovery, laying the foundation for preschool readiness.</p>
-        <h4>Mindful Learning Pathway</h4>
-        <ul>
-          <li><strong>Motor Development:</strong> Building fine motor skills (gripping, stacking, pouring) and gross motor skills (balancing, climbing, jumping).</li>
-          <li><strong>Language & Communication:</strong> Encouraging self-expression through listening, speaking, phonics, songs, and stories.</li>
-          <li><strong>Exploration & Curiosity:</strong> Sensory-rich experiences that help toddlers make sense of their world.</li>
-        </ul>
-        <h4>Skills Being Developed</h4>
-        <ul>
-          <li>Eating and dressing independently</li>
-          <li>Fine and gross motor coordination</li>
-          <li>Early vocabulary and expression</li>
-          <li>Confidence, curiosity, and social readiness</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="program-row-alternating wow fadeInRight" data-wow-delay="0.3s">
-      <div class="program-image">
-        <img src="images/program-2.png" alt="Nursery Program" class="program-modal-image">
-      </div>
-      <div class="program-content">
-        <h3>🌟 Nursery (Pre-K) Program (2.5 to 4 years)</h3>
-        <p>At this stage, children’s natural curiosity and imagination peak. They begin building friendships, developing empathy, and exploring patterns in language and math—laying the groundwork for lifelong learning.</p>
-        <ul>
-          <li><strong>Physical Development through Play:</strong> Dancing, climbing, and outdoor games to build coordination and confidence.</li>
-          <li><strong>Language & Emotional Growth:</strong> Storytelling, dramatics, and show-and-tell to spark communication and empathy.</li>
-          <li><strong>Cognitive Development:</strong> Early exposure to pre-math concepts (patterns, sequencing, comparing).</li>
-        </ul>
-        <h4>Skills Being Developed</h4>
-        <ul>
-          <li>Life skills: eating with a spoon, wearing shoes, pouring water</li>
-          <li>Pre-math &amp; logic: recognizing patterns, sequencing, size comparison</li>
-          <li>Language &amp; early literacy: alphabets, phonics, vocabulary</li>
-          <li>Social-emotional growth: empathy, collaboration, confidence</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="program-row-alternating wow fadeInLeft" data-wow-delay="0.3s">
-      <div class="program-image">
-        <img src="images/program-3.png" alt="K1 Program" class="program-modal-image">
-      </div>
-      <div class="program-content">
-        <h3>🌼 K1 Program (Junior KG) (4 to 5 years)</h3>
-        <p>The ages of 4–5 represent a critical window for social, emotional, physical, and cognitive development. Children are more independent, curious, and eager to connect with peers, preparing for structured learning environments.</p>
-        <ul>
-          <li><strong>Social & Emotional Learning:</strong> Circle time, shared meals, and smooth transition plans for emotional safety.</li>
-          <li><strong>Physical Development:</strong> Indoor/outdoor stations, yoga, and Montessori fine-motor tools for coordination and early writing readiness.</li>
-          <li><strong>Cognitive Development:</strong> Real-life explorations (nature walks, baking, classifying) and Montessori provocations for numeracy and problem-solving.</li>
-        </ul>
-        <h4>Skills Being Developed</h4>
-        <ul>
-          <li>Emergent writing &amp; pre-reading</li>
-          <li>Early numeracy (counting, sequencing, classifying)</li>
-          <li>Social confidence, empathy, and resilience</li>
-          <li>Fine and gross motor development</li>
-          <li>Creative self-expression and problem-solving</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="program-row-alternating wow fadeInRight" data-wow-delay="0.3s">
-        <div class="program-image">
-            <img src="images/program-4.png" alt="K2 Program" class="program-modal-image">
-        </div>
-        <div class="program-content">
-            <h3>🌟 K2 Program (Senior KG) (5 to 6 years)</h3>
-            <p>This stage bridges preschool and formal schooling. Children grow in independence, curiosity, and social awareness, preparing for Grade 1 with nurturing guidance.</p>
-            <ul>
-                <li><strong>Academic Readiness:</strong> Introduction to writing, early math, and guided reading.</li>
-                <li><strong>Social-Emotional Growth:</strong> Circle time, discussions, and mindfulness to nurture empathy and responsibility.</li>
-                <li><strong>Independence & Life Skills:</strong> Managing routines, caring for belongings, and making choices confidently.</li>
-            </ul>
-            <h4>Skills Being Developed</h4>
-            <ul>
-                <li>Emergent Literacy &amp; Writing: Storytelling, tracing, rainbow writing, sound-sorting, independent story writing</li>
-                <li>Early numeracy &amp; Logic: Counting, sequencing, bar graphs, simple math operations</li>
-                <li>Language &amp; Communication: Vocabulary building, role-play, early public speaking</li>
-                <li>Social-Emotional Growth: Empathy, conflict resolution, collaboration</li>
-            </ul>
-        </div>
-    </div>
-  </div>
-</section>
 <div class="about-social-links">
 					<a href="#"><i class="fa fa-facebook"></i></a>
 					<a href="#"><i class="fa fa-instagram"></i></a>
@@ -585,11 +510,11 @@ document.addEventListener('DOMContentLoaded', function() {
 								<div class="event-single event-orange">
 									<figure>
 										<img src="images/event-1.jpg" alt="" />
-										<div class="date"><span>06</span> Dec - 18</div>
+										<div class="date"><span>01</span> Mar</div>
 									</figure>
 									
 									<div class="event-body">
-										<h3>Outdor Music Event</h3>
+										<h3>A week Carnival for Kids</h3>
 										<p class="location">Kolshet Rd, Thane West</p>
 										<p class="time">9:00 AM to 12:00 PM</p>
 									</div>
@@ -599,11 +524,11 @@ document.addEventListener('DOMContentLoaded', function() {
 								<div class="event-single event-blue">
 									<figure>
 										<img src="images/event-2.jpg" alt="" />
-										<div class="date"><span>06</span> Dec - 18</div>
+										<div class="date"><span>01</span> Apr </div>
 									</figure>
 									
 									<div class="event-body">
-										<h3>Outdor Music Event</h3>
+										<h3>Summer Camp</h3>
 										<p class="location">Kolshet Rd, Thane West</p>
 										<p class="time">9:00 AM to 12:00 PM</p>
 									</div>
@@ -613,11 +538,11 @@ document.addEventListener('DOMContentLoaded', function() {
 								<div class="event-single event-green">
 									<figure>
 										<img src="images/event-3.jpg" alt="" />
-										<div class="date"><span>06</span> Dec - 18</div>
+										<div class="date"><span>01 - 30</span> May</div>
 									</figure>
 									
 									<div class="event-body">
-										<h3>Outdor Music Event</h3>
+										<h3>Summer Camp</h3>
 										<p class="location">Kolshet Rd, Thane West</p>
 										<p class="time">9:00 AM to 12:00 PM</p>
 									</div>
@@ -694,8 +619,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-title">
-						<h2 class="color-orange">Photo Gallery</h2>
-						<p>Lorem ipsum dolor sit amet, ipsum dolor sit amet</p>
+						<h2 class="color-orange">Sneak Peak in Cubtopia</h2>
+						<p></p>
 					</div>
 					</div>
 			</div>
